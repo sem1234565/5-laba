@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про способ доставки
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Страница про способ доставки</h1>
+    <a class="btn btn-primary" href="/create_method_of_delivery">Добавить способ доставки</a>
+
+     {% if method_of_delivery|length > 0 %}
+        {% for elements in method_of_delivery %}
+            <div class="alert alert-info">
+                <h3>{{ elements.method_of_receiving }}</h3>
+                <a href="/method_of_delivery/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлен ни один способ доставки</p>
+    {% endif %}
+
+</div>
+{% endblock %}

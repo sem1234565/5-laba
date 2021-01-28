@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения резервирования данных
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение резервирования данных</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" value="{{ reservation.id }}" placeholder="Введите ID резервирования"><br>
+        <input type="date" name="reservationdate" id="reservationdate" class="form-control" value="{{ reservation.reservationdate }}" placeholder="Введите дату резервирования"><br>
+        <input type="text" name="complete_reservation" id="complete_reservation" class="form-control" value="{{ reservation.complete_reservation }}" placeholder="Введите выполнено или не выполнено"><br>
+    
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

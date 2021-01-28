@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про издания
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Страница про издания</h1>
+    <a class="btn btn-primary" href="/create_editions">Добавить издание</a>
+
+     {% if editions|length > 0 %}
+        {% for elements in editions %}
+            <div class="alert alert-info">
+                <h3>{{ elements.name_of_editions }}</h3>
+                <a href="/editions/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одно издание</p>
+    {% endif %}
+
+</div>
+{% endblock %}

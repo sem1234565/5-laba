@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания издания
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление издания</h1>
+    <form method="post">
+        <input type="text" name="received_editions" id="received_editions" class="form-control"  placeholder="Введите полученные издания"><br>
+        <input type="text" name="name_of_editions" id="name_of_editions" class="form-control"  placeholder="Введите название изданий"><br>
+        <input type="text" name="index" id="index" class="form-control"  placeholder="Введите индекс изданий"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

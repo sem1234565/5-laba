@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про резервирования
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Страница про резервирования</h1>
+    <a class="btn btn-primary" href="/create_reservation">Добавить резервирование</a>
+
+     {% if reservation|length > 0 %}
+        {% for elements in reservation %}
+            <div class="alert alert-info">
+                <h3>{{ elements.id }}</h3>
+                <a href="/reservation/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одно резервирование</p>
+    {% endif %}
+
+</div>
+{% endblock %}

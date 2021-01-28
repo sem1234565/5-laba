@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ stuff.name_of_stuff }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ stuff.name_of_stuff }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID сотрудника: {{ stuff.id }}</b> </p>
+        <p><b>Имя сотрудника: {{ stuff.name_of_stuff }}</b> </p>
+        <p><b>Адрес сотрудника: {{ stuff.adress_of_stuff }}</b> </p>
+        <p><b>Номер телефона сотрудника: {{ stuff.numberphone }}</b> </p>
+        <a href="/stuff/{{ stuff.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/stuff/{{ stuff.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

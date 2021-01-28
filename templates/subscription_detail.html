@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ subscription.name_of_editions }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ subscription.name_of_editions }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID подписки: {{ subscription.id }}</b> </p>
+        <p><b>Дата начала подписки: {{ subscription.start_date }}</b> </p>
+        <p><b>Дата окончания подписки: {{ subscription.end_date }}</b> </p>
+        <p><b>Год подписки: {{ subscription.for_year }}</b> </p>
+        <p><b>Пол года подписки: {{ subscription.half_year }}</b> </p>
+        <p><b>Цена подписки: {{ subscription.price }}</b> </p>
+        <p><b>Название издания: {{ subscription.name_of_editions }}</b> </p>
+        <p><b>Способ получения издания: {{ subscription.method_of_receiving }}</b> </p>
+        <a href="/subscription/{{ subscription.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/subscription/{{ subscription.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

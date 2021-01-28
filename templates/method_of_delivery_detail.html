@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ method_of_delivery.method_of_receiving }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ method_of_delivery.method_of_receiving }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID способа: {{ method_of_delivery.id }}</b> </p>
+        <p><b>приблизительная дата доставки: {{ method_of_delivery.estimated_date }}</b> </p>
+        <a href="/method_of_delivery/{{ method_of_delivery.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/method_of_delivery/{{ method_of_delivery.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

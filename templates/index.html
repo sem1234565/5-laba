@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 style="color:rgb(52, 37, 136)">Основные вкладки сайта:</h1>
+    <h3>Информация о Резервировании данных - <a class="btn btn-warning" href="/reservation">Посмотреть</a></h3>
+    <h3>Информация о Изданиях - <a class="btn btn-warning" href="/editions">Посмотреть</a></h3>
+    <h3>Информация о Подписке - <a class="btn btn-warning" href="/subscription">Посмотреть</a></h3>
+    <h3>Информация о Полученных изданиях - <a class="btn btn-warning" href="/received_editions">Посмотреть</a></h3>
+    <h3>Информация о Сотрудниках - <a class="btn btn-warning" href="/stuff">Посмотреть</a></h3>
+    <h3>Информация о Способе доставки - <a class="btn btn-warning" href="/method_of_delivery">Посмотреть</a></h3>
+</div>
+{% endblock %}

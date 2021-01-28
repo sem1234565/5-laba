@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения способа доставки
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение способа доставки</h1>
+    <form method="post">
+        <input type="text" name="method_of_receiving" id="method_of_receiving" class="form-control" value="{{ method_of_delivery.method_of_receiving }}" placeholder="Введите способ получения"><br>
+        <input type="date" name="estimated_date" id="estimated_date" class="form-control" value="{{ method_of_delivery.estimated_date }}" placeholder="Введите приблизительную дату получения"><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

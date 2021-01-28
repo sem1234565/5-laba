@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения полученных изданий
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение полученных изданий</h1>
+    <form method="post">
+        <input type="date" name="date_of_received" id="date_of_received" class="form-control" value="{{ received_editions.date_of_received }}" placeholder="Введите дату получения издания"><br>
+        <input  type="text" name="name_of_editions" id="name_of_editions" class="form-control" value="{{ received_editions.name_of_editions }}" placeholder="Введите название полученного издания"/><br>
+        <input type="number" name="number_of_editions" id="number_of_editions" class="form-control" value="{{ received_editions.number_of_editions }}" placeholder="Введите номер полученного издания"><br>
+        <input type="text" name="index" id="index" class="form-control" value="{{ received_editions.index }}" placeholder="Введите индекс изданий"><br>
+        <input type="text" name="name_of_stuff" id="name_of_stuff" class="form-control" value="{{ received_editions.name_of_stuff }}" placeholder="Введите имя сотрудника"><br>
+        
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

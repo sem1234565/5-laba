@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+    .bodys {
+    background: url(https://i.pinimg.com/originals/db/d8/3c/dbd83c2de27de7d14e9eb04392994e25.jpg);
+    background-size: 100%;
+    }
+    </style>
+</head>
+<body class="bodys">
+<div class="container">
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <nav class="my-2 my-md-0 me-md-3">
+        <a class="h4 text-red" href="/">Главная</a>
+        <a class="p-3 h5 text-dark" href="/reservation">Резервирование данных</a>
+        <a class="p-3 h5 text-dark" href="/editions">Издания</a>
+        <a class="p-3 h5 text-dark" href="/subscription">Подписка</a>
+        <a class="p-3 h5 text-dark" href="/received_editions">Полученные издания</a>
+        <a class="p-3 h5 text-dark" href="/stuff">Сотрудник</a>
+        <a class="p-3 h5 text-dark" href="/method_of_delivery">Способ доставки</a>
+  </nav>
+</header>
+    {% block body %}{% endblock %}
+</div>
+</body>
+</html>

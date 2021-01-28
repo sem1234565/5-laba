@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про Сотрудников
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Страница про Сотрудников</h1>
+    <a class="btn btn-primary" href="/create_stuff">Добавить сотрудник</a>
+
+     {% if stuff|length > 0 %}
+        {% for elements in stuff %}
+            <div class="alert alert-info">
+                <h3>{{ elements.name_of_stuff }}</h3>
+                <a href="/stuff/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлен ни один сотрудник</p>
+    {% endif %}
+
+</div>
+{% endblock %}

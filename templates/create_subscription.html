@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания подписки
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Добавление подписки</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" placeholder="Введите id подписки"><br>
+        <input type="date" name="start_date" id="start_date" class="form-control" placeholder="Введите дату начала подписки"><br>
+        <input  type="date" name="end_date" id="end_date" class="form-control" placeholder="Введите дату окончания подписки"/><br>
+        <input type="text" name="for_year" id="for_year" class="form-control" placeholder="Подписка на год"><br>
+        <input type="text" name="half_year" id="half_year" class="form-control" placeholder="Подписка на пол года"><br>
+        <input type="number" name="price" id="price" class="form-control" placeholder="Укажите цену"><br>
+        <input type="text" name="name_of_editions" id="name_of_editions" class="form-control"  placeholder="Введите название издания"><br>
+        <input type="text" name="method_of_receiving" id="method_of_receiving" class="form-control"  placeholder="Введите способ получения"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

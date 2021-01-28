@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения сотрудника
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение сотрудника</h1>
+    <form method="post">
+        <input type="text" name="name_of_stuff" id="name_of_stuff" class="form-control" value="{{ stuff.name_of_stuff }}" placeholder="Введите имя сотрудника"><br>
+        <input type="text" name="adress_of_stuff" id="adress_of_stuff" class="form-control" value="{{ stuff.adress_of_stuff }}" placeholder="Введите адрес сотрудника"><br>
+        <input type="number" name="numberphone" id="numberphone" class="form-control" value="{{ stuff.numberphone }}" placeholder="Номер телефона сотрудника"><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания резервирования данных
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление резервирования</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" placeholder="Введите ID резервирования данных"><br>
+        <input type="date" name="reservationdate" id="reservationdate" class="form-control" placeholder="Введите дату резервирования данных"><br>
+        <input type="text" name="complete_reservation" id="complete_reservation" class="form-control"  placeholder="Введите выполнено или не выполнено"><br>
+        
+        <p><input type="submit" value="Отправить" class="btn btn-success"></p>
+
+    </form>
+</div>
+
+{% endblock %}

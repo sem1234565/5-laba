@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про полученные издания
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Страница про полученные издания</h1>
+    <a class="btn btn-primary" href="/create_received_editions">Добавить полученные издания</a>
+
+     {% if received_editions|length > 0 %}
+        {% for elements in received_editions %}
+            <div class="alert alert-info">
+                <h3>{{ elements.name_of_editions }}</h3>
+                <a href="/received_editions/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одно полученные издания</p>
+    {% endif %}
+
+</div>
+{% endblock %}

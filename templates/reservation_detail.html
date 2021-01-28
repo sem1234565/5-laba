@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ reservation.reservationdate }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ reservation.reservationdate }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID резервирования: {{ reservation.id }}</b> </p>
+        <p><b>Дата резервирования: {{ reservation.reservationdate }}</b> </p>
+        <p><b>Отметка о выполнении: {{ reservation.complete_reservation }}</b> </p>
+        <a href="/reservation/{{ reservation.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/reservation/{{ reservation.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

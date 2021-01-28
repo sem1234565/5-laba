@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания полученного издания
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Добавление полученного издания</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" placeholder="Введите id полученного издания"><br>
+        <input type="date" name="date_of_received" id="date_of_received" class="form-control" placeholder="Введите дату полученного издания"><br>
+        <input  type="text" name="name_of_editions" id="name_of_editions" class="form-control" placeholder="Введите название полученного издания"/><br>
+        <input type="number" name="number_of_editions" id="number_of_editions" class="form-control" placeholder="Введите номер полученного издания"><br>
+        <input type="text" name="index" id="index" class="form-control" placeholder="Введите индекс полученного издания"><br>
+        <input type="text" name="name_of_stuff" id="name_of_stuff" class="form-control" placeholder="Введите имя сотрудника получившего издания"><br>
+        
+        <p><input type="submit" value="Отправить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

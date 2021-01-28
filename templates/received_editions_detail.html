@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ received_editions.date_of_received }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ received_editions.date_of_received }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID полученных изданий: {{ received_editions.id }}</b> </p>
+        <p><b>Дата получения изданий: {{ received_editions.date_of_received }}</b> </p>
+        <p><b>Название полученных изданий: {{ received_editions.name_of_editions }}</b> </p>
+        <p><b>Номер полученных изданий: {{ received_editions.number_of_editions }}</b> </p>
+        <p><b>Индекс полученных изданий: {{ received_editions.index}}</b> </p>
+        <p><b>Сотрудник получивший издания: {{ received_editions.name_of_stuff }}</b> </p>
+        <a href="/received_editions/{{ received_editions.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/received_editions/{{ received_editions.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}
